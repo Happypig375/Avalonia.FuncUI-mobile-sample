@@ -22,12 +22,12 @@
     <PackageReference Include="Avalonia.Android" Version="$(AvaloniaVersion)" />
     <ProjectReference Include="..\AvaApp\AvaApp.fsproj" />
 
-    <None Include="Properties\AndroidManifest.xml"/>
+    <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Icon.png">
       <Link>Resources\drawable\Icon.png</Link>
     </AndroidResource>
-    <AndroidResource Include="Resources\**\*"/>
-    <Compile Include="MainActivity.fs"/>
-    <Compile Include="SplashActivity.fs"/>
+    <AndroidResource Include="Resources\**\*" />
+    <Compile Include="MainActivity.fs" />
+    <Compile Include="SplashActivity.fs" />
   </ItemGroup>
 </Project>
