@@ -20,8 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Avalonia.FuncUI", "Avalonia.FuncUI\src\Avalonia.FuncUI\Avalonia.FuncUI.fsproj", "{444EF981-0192-41FC-8FEB-D70599282D67}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Avalonia.FuncUI.DSL", "Avalonia.FuncUI\src\Avalonia.FuncUI.DSL\Avalonia.FuncUI.DSL.fsproj", "{BF99DF24-4DED-45C7-8D49-C5658F93F6EF}"
-EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Avalonia.FuncUI.Elmish", "Avalonia.FuncUI\src\Avalonia.FuncUI.Elmish\Avalonia.FuncUI.Elmish.fsproj", "{1163ADCF-D9BD-4335-915C-4B015BD55794}"
 EndProject
 Global
@@ -52,10 +50,6 @@ Global
 		{444EF981-0192-41FC-8FEB-D70599282D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{444EF981-0192-41FC-8FEB-D70599282D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{444EF981-0192-41FC-8FEB-D70599282D67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF99DF24-4DED-45C7-8D49-C5658F93F6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF99DF24-4DED-45C7-8D49-C5658F93F6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF99DF24-4DED-45C7-8D49-C5658F93F6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF99DF24-4DED-45C7-8D49-C5658F93F6EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1163ADCF-D9BD-4335-915C-4B015BD55794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1163ADCF-D9BD-4335-915C-4B015BD55794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1163ADCF-D9BD-4335-915C-4B015BD55794}.Release|Any CPU.ActiveCfg = Release|Any CPU
