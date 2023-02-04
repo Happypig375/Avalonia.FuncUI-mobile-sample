@@ -14,14 +14,14 @@ type App() =
     inherit Application()
 
     override this.Initialize() =
-        this.Styles.Add (FluentTheme(baseUri = null, Mode = FluentThemeMode.Dark))
+        this.Styles.Add (FluentTheme())
+        this.RequestedThemeVariant <- Styling.ThemeVariant.Dark
         this.Styles.Load "avares://AvaApp/Styles.xaml"
 
     override this.OnFrameworkInitializationCompleted() =
         let init(this: 'T when 'T :> Controls.ContentControl and 'T :> IViewHost) (visualRoot: Rendering.IRenderRoot) =
             if false then
-                visualRoot.VisualRoot.Renderer.DrawFps <- true
-                visualRoot.VisualRoot.Renderer.DrawDirtyRects <- true
+                visualRoot.Renderer.Diagnostics.DebugOverlays <- Avalonia.Rendering.RendererDebugOverlays.Fps
                         
             Shell.program
             |> Program.withHost this
