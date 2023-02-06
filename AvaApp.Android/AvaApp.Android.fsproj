@@ -11,9 +11,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <PublishTrimmed>True</PublishTrimmed>
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EnableLLVM>True</EnableLLVM>
     <AndroidEnableProfiledAot>True</AndroidEnableProfiledAot>
+    <!-- https://github.com/dotnet/runtime/issues/79910 -->
+    <EnableLLVM>False</EnableLLVM>
+    <AndroidLinkTool>r8</AndroidLinkTool>
   </PropertyGroup>
 
   <ItemGroup>
