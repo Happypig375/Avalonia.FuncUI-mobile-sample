@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "AvaApp.Browser", "AvaApp.Browser\AvaApp.Browser.fsproj", "{68A88C98-EE56-4C1D-B895-31D6D40FAD4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{A87412B3-7CB7-4C27-933F-25853A1B860C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{A87412B3-7CB7-4C27-933F-25853A1B860C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A87412B3-7CB7-4C27-933F-25853A1B860C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A88C98-EE56-4C1D-B895-31D6D40FAD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A88C98-EE56-4C1D-B895-31D6D40FAD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A88C98-EE56-4C1D-B895-31D6D40FAD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A88C98-EE56-4C1D-B895-31D6D40FAD4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

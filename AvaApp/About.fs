@@ -36,13 +36,13 @@ module About =
                 | AvaloniaAwesome -> "https://github.com/AvaloniaCommunity/awesome-avalonia"
                 | FuncUIRepository -> "https://github.com/fsprojects/Avalonia.FuncUI"
                 | FuncUISamples -> "https://github.com/fsprojects/Avalonia.FuncUI/tree/master/src/Examples"
-                 
-            if RuntimeInformation.IsOSPlatform(OSPlatform.Windows) then
+            
+            if System.OperatingSystem.IsWindows() then
                 let start = sprintf "/c start %s" url
                 Process.Start(ProcessStartInfo("cmd", start)) |> ignore
-            else if RuntimeInformation.IsOSPlatform(OSPlatform.Linux) then
+            elif System.OperatingSystem.IsLinux() then
                 Process.Start("xdg-open", url) |> ignore
-            else if RuntimeInformation.IsOSPlatform(OSPlatform.OSX) then
+            elif System.OperatingSystem.IsMacOS() then
                 Process.Start("open", url) |> ignore
             state, Cmd.none
 
