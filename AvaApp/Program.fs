@@ -19,10 +19,7 @@ type App() =
         this.Styles.Load "avares://AvaApp/Styles.xaml"
 
     override this.OnFrameworkInitializationCompleted() =
-        let init(this: 'T when 'T :> Controls.ContentControl and 'T :> IViewHost) (visualRoot: Rendering.IRenderRoot) =
-            if false then
-                visualRoot.Renderer.Diagnostics.DebugOverlays <- Avalonia.Rendering.RendererDebugOverlays.Fps
-                        
+        let init(this: 'T when 'T :> Controls.ContentControl and 'T :> IViewHost) (visualRoot: Rendering.IRenderRoot) =       
             Shell.program
             |> Program.withHost this
             |> Program.run
