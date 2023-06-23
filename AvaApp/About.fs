@@ -7,7 +7,6 @@ module About =
     open Avalonia.FuncUI
     open Avalonia.FuncUI.Types
     open System.Diagnostics
-    open System.Runtime.InteropServices
     open Avalonia.Controls
     open Avalonia.Layout
     open Avalonia.FuncUI.DSL
@@ -26,24 +25,17 @@ module About =
 
     let init = { noop = false }, Cmd.none
 
+    let mutable urlOpen = Unchecked.defaultof<string -> unit> // Set this in platform projects
 
     let update (msg: Msg) (state: State) =
         match msg with
         | OpenUrl link -> 
-            let url = 
-                match link with 
-                | AvaloniaRepository -> "https://github.com/AvaloniaUI/Avalonia"
-                | AvaloniaAwesome -> "https://github.com/AvaloniaCommunity/awesome-avalonia"
-                | FuncUIRepository -> "https://github.com/fsprojects/Avalonia.FuncUI"
-                | FuncUISamples -> "https://github.com/fsprojects/Avalonia.FuncUI/tree/master/src/Examples"
-            
-            if System.OperatingSystem.IsWindows() then
-                let start = sprintf "/c start %s" url
-                Process.Start(ProcessStartInfo("cmd", start)) |> ignore
-            elif System.OperatingSystem.IsLinux() then
-                Process.Start("xdg-open", url) |> ignore
-            elif System.OperatingSystem.IsMacOS() then
-                Process.Start("open", url) |> ignore
+            match link with 
+            | AvaloniaRepository -> "https://github.com/AvaloniaUI/Avalonia"
+            | AvaloniaAwesome -> "https://github.com/AvaloniaCommunity/awesome-avalonia"
+            | FuncUIRepository -> "https://github.com/fsprojects/Avalonia.FuncUI"
+            | FuncUISamples -> "https://github.com/fsprojects/Avalonia.FuncUI/tree/master/src/Examples"
+            |> urlOpen
             state, Cmd.none
 
     let headerView (dock: Dock): IView = 
